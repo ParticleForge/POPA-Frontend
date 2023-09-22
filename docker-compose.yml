@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  frontend:
+    build: .
+    container_name: aigenapp
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./aigenapp:/app/src/app/aigenapp
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
